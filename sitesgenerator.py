@@ -2,18 +2,18 @@ import random
 import webbrowser
 import keyboard
 import time
-print("wcisnij spacje!") 
-def funkcja(klawisz):
+print("press space!") 
+def func(key):
     site_txt_location=""
-    if klawisz =="space":
-        plik = open(site_txt_location,"r")
-        webbrowser.open(random.choice(plik.readlines()))
+    if key =="space":
+        file = open(site_txt_location,"r")
+        webbrowser.open(random.choice(file.readlines()))
         time.sleep(1)
-        return funkcja(keyboard.read_key())
-        plik.close()
+        return func(keyboard.read_key())
+        file.close()
     else:
         print("wcisnij spacje!")
-        return funkcja(keyboard.read_key())
+        return func(keyboard.read_key())
 
-funkcja(keyboard.read_key())
+func(keyboard.read_key())
  
